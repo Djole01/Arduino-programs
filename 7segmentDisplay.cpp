@@ -45,53 +45,51 @@ void loop() {
 		digitalWrite(3,LOW);
 		digitalWrite(4,LOW);
 		delay(1000);
-	
-	
-		}
-	
+	}
 	// turn off display.
-		digitalWrite(2,HIGH);
-		digitalWrite(8,HIGH);
-		digitalWrite(7,HIGH);
-		digitalWrite(6,HIGH);
-		digitalWrite(5,HIGH);
-		digitalWrite(3,HIGH);
-		digitalWrite(4,HIGH);
+	digitalWrite(2,HIGH);
+	digitalWrite(8,HIGH);
+	digitalWrite(7,HIGH);
+	digitalWrite(6,HIGH);
+	digitalWrite(5,HIGH);
+	digitalWrite(3,HIGH);
+	digitalWrite(4,HIGH);
+
+	// counter clockwise circle
+	digitalWrite(2,HIGH);
+	digitalWrite(8,HIGH);
+	digitalWrite(7,HIGH);
+	digitalWrite(6,HIGH);
+	digitalWrite(5,HIGH);
+	digitalWrite(3,HIGH);
+	digitalWrite(4,HIGH);
+	delay(300);
+
+	for(int n=0;n<3;n++)
+	{
 	
-		// counter clockwise circle
-		digitalWrite(2,HIGH);
-		digitalWrite(8,HIGH);
-		digitalWrite(7,HIGH);
-		digitalWrite(6,HIGH);
-		digitalWrite(5,HIGH);
-		digitalWrite(3,HIGH);
-		digitalWrite(4,HIGH);
-		delay(300);
-	
-		for(int n=0;n<3;n++){
-	
-		for (int o = 1; o < 7; o++)
-			{
+	for (int o = 1; o < 7; o++)
+		{
 			digitalWrite(o,LOW);
 			delay(300);
 			digitalWrite(o,HIGH);
-			}
-		digitalWrite(8,LOW);
-		delay(300);
-		digitalWrite(8,HIGH);
 		}
-		delay(1000);
-		// turn all led's on and off 1 by 1.
-				for(n=0;n<3;n++){
+	digitalWrite(8,LOW);
+	delay(300);
+	digitalWrite(8,HIGH);
+	}
+	delay(1000);
+	// turn all led's on and off 1 by 1.
+	for(n=0;n<3;n++)
+	{
+		digitalWrite(2,LOW);
+		digitalWrite(8,LOW);
+		digitalWrite(7,LOW);
+		digitalWrite(6,LOW);
+		digitalWrite(5,LOW);
+		digitalWrite(3,LOW);
+		digitalWrite(4,LOW);
 
-			digitalWrite(2,LOW);
-			digitalWrite(8,LOW);
-			digitalWrite(7,LOW);
-			digitalWrite(6,LOW);
-			digitalWrite(5,LOW);
-			digitalWrite(3,LOW);
-			digitalWrite(4,LOW);
-		
 			for (o = 1; o < 9; o++)
 			{
 				digitalWrite(o,HIGH);
@@ -99,35 +97,33 @@ void loop() {
 			
 			}
 		
-		}
-		delay(1000);
-		// clockwise circle
-		digitalWrite(2,HIGH);
-		digitalWrite(8,HIGH);
-		digitalWrite(7,HIGH);
-		digitalWrite(6,HIGH);
-		digitalWrite(5,HIGH);
-		digitalWrite(3,HIGH);
-		digitalWrite(4,HIGH);
-		delay(300);
+	}
+	delay(1000);
+	// clockwise circle
+	digitalWrite(2,HIGH);
+	digitalWrite(8,HIGH);
+	digitalWrite(7,HIGH);
+	digitalWrite(6,HIGH);
+	digitalWrite(5,HIGH);
+	digitalWrite(3,HIGH);
+	digitalWrite(4,HIGH);
+	delay(300);
 	
-		for(n=0;n<3;n++){
-		
-			digitalWrite(8,LOW);
+	for(n=0;n<3;n++)
+	{
+	digitalWrite(8,LOW);
+	delay(300);
+	digitalWrite(8,HIGH);
+	for (o = 6; o > 1; o--)
+		{
+			digitalWrite(o,LOW);
 			delay(300);
-			digitalWrite(8,HIGH);
-		
-		
-			for (o = 6; o > 1; o--)
-			{
-				digitalWrite(o,LOW);
-				delay(300);
-				digitalWrite(o,HIGH);
-			}
-		
+			digitalWrite(o,HIGH);
 		}
-		delay(1000);
+		
+	}
+	delay(1000);
 	
 	
-		exit(0);
+			exit(0);
 }
